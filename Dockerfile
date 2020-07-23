@@ -8,9 +8,9 @@ ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
 COPY requirements.txt /
 RUN pip install -r /requirements.txt
 
-COPY . /home/site/wwwroot
-
 # install Tesseract OCR using the Google binaries
 RUN apt-get update -y
 RUN apt-get upgrade -y
 RUN apt-get install tesseract-ocr -y
+
+COPY . /home/site/wwwroot
