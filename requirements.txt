@@ -1,0 +1,6 @@
+# Minimum packages for azure functions
+azure-functions
+
+# Additional packages
+pytesseract
+
