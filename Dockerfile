@@ -6,9 +6,8 @@ ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
     AzureFunctionsJobHost__Logging__Console__IsEnabled=true
 
 # install Tesseract OCR using the Google binaries
-RUN apt-get update -y
-RUN apt-get upgrade -y
-RUN apt-get install tesseract-ocr -y
+RUN apt-get update && apt-get install -y \
+     tesseract-ocr 
 
 COPY requirements.txt /
 RUN pip install -r /requirements.txt
